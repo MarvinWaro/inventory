@@ -11,5 +11,9 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-    
+
+    Route::get('/manage-employees', function () {
+        return view('admin.manage-employees.index');
+    })->name('manage-employees');
+
 });
